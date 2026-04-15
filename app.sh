@@ -1,5 +1,6 @@
 #!/bin/bash
 
-echo 'App version: 1.0.0'
+echo 'App version: 2.0.0'
 echo 'Running on: '$(hostname)
 echo 'Date: '$(date)
+echo 'Memory Info: '$(free -m)

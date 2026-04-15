@@ -19,3 +19,4 @@ This repository demonstrates a complete Continuous Integration (CI) workflow usi
 1. Give execution permissions: `chmod +x *.sh`
 2. Run the app: `./app.sh`
 3. Run tests: `./test.sh`
+Triggering automated build test

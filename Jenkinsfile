@@ -5,6 +5,7 @@ pipeline {
  
     environment {
         APP_VERSION = '1.0.0'
+        BUILD_TS = "${sh(script: 'date +%Y%m%d-%H%M%S' , returnStdout: true).trim()}"
     }
  
     stages {
@@ -31,7 +32,7 @@ pipeline {
             }
         }
  
-        stage('Archive') {
+        stage('Archive Artifacts') {
             steps {
                 echo 'Archiving artifacts...'
                 archiveArtifacts artifacts: 'app.sh', fingerprint: true
@@ -41,7 +42,7 @@ pipeline {
  
     post {
         success { echo "Build #${BUILD_NUMBER} succeeded!" }
-        failure { echo "Build #${BUILD_NUMBER} failed. Check console." }
+        failure { echo "Build failed! You can check logs here: ${env.BUILD_URL}" }
         always  { cleanWs() }
     }
 }

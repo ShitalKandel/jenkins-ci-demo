@@ -13,6 +13,8 @@ This repository demonstrates a complete Continuous Integration (CI) workflow usi
 - **Multibranch Support**: Distinct build histories for `main` and `feature` branches.
 - **Artifact Management**: Versioned archiving of successful builds.
 
+
+
 ## How to Run Locally
 1. Give execution permissions: `chmod +x *.sh`
 2. Run the app: `./app.sh`
